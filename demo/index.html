@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- <html lang="en-GB"> -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  below will be rendered
+
+  <div id="demo"></div>
+
+  web components end
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../dist/src/lit-project-by-open-wc.js';
+
+    const header = 'Hello owc World!';
+    render(
+      html`
+        <lit-project-by-open-wc .header=${header}>
+          custom-element not found
+        </lit-project-by-open-wc>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
